@@ -1,0 +1,180 @@
+{% extends "base.html" %}
+{% block content%}
+      
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 pt-2 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
+          <h1>What is Blood?</h1>
+          <ul>
+            <li><i class="ri-check-line"></i>Blood is a fluid that gives Life</li>
+            <li><i class="ri-check-line"></i>Blood is a fluid that gives Growth</li>
+            <li><i class="ri-check-line"></i>Blood is a fluid that gives Health</li>
+          </ul>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 hero-img">
+         <img src="{{url_for('static', filename='img/bloodprofile.jpg')}}" alt="" height="800" !important />
+        </div>
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="row content">
+          <div class="col-lg-6">
+            <h2>Donate your blood for a reason, Let the reason be Life</h2>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <ul>
+              <li><i class="ri-check-double-line"></i>Through this website, any person who is interested in donating their Blood can register</li>
+              <li><i class="ri-check-double-line"></i>If anyone wants to search for blood online he can also take the help of this site. </li>
+              <li><i class="ri-check-double-line"></i>Provides an easy way to find donor for the blood based on Location and Blood Group</li>
+              <li><i class="ri-check-double-line"></i>24X7 Availability</li>
+            </ul>
+          </div>
+          
+        </div>
+       <div class="aboutpic">
+        <img src="{{url_for('static', filename='img/aboutuspic.jpeg')}}" width=450px height=400px />
+      </div>
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Donation-Process Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Donation Process</h2>
+        </div>
+
+        <div class="row">
+          <div class="content col-xl-5 d-flex flex-column justify-content-center">
+            <img src="{{url_for('static', filename='img/donation.jpeg')}}" class="img-fluid" alt="" />
+          </div>
+          <div class="col-xl-7">
+            <div class="icon-boxes d-flex flex-column justify-content-center">
+              <div class="row">
+                <div class="col-lg-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                  <div class="icon-box iconbox-blue">
+                    <div class="icon">
+                      <img src="{{url_for('static', filename='img/Donation-process/registration.jpg')}}" alt="" height="125px" width="100px" />
+                    </div>
+                    <br>
+                    {% if user.is_authenticated %}
+                    <h4>Registration</a></h4>
+                    {% else %}
+                    <h4><a href="login.html">Registration</a></h4>
+                    {% endif %}
+                    <p></p>
+                  </div>
+                </div>
+
+                <div class="col-lg-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="200">
+                  <div class="icon-box iconbox-orange ">
+                    <div class="icon">
+                      <img src="{{url_for('static', filename='img/Donation-process/search.jpg')}}" alt="" height="125px" width="100px" />
+                      
+                    </div> 
+                    <br>
+                    <h4><a href="search.html">Search</a></h4>
+                    <p></p>
+                  </div>
+                </div>
+
+                <div class="col-lg-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
+                  <div class="icon-box iconbox-pink">
+                    <div class="icon">
+                      <img src="{{url_for('static', filename='img/Donation-process/donation.jpg')}}" alt="" height="125px" width="100px" />
+                    </div>
+                    <br>
+                    <h4><a href="register.html">Donate</a></h4>
+                    <p></p>
+                  </div> 
+                </div>
+
+                <div class="col-lg-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
+                  <div class="icon-box iconbox-teal">
+                    <div class="icon">
+                      <img src="{{url_for('static', filename='img/Donation-process/savelife.jpg')}}" alt="" height="125px" width="100px" />
+                      </div>
+                      <br>
+                    <h4>Save Lives</h4>
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End .content-->
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Donation-Process Section -->
+
+    
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6">
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="info-box">
+                  <i class="bx bx-map"></i>
+                  <h3>Our Address</h3>
+                  <p>Maisammaguda, Dhulapally, Hyderabad, 500100</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box mt-4">
+                  <i class="bx bx-envelope"></i>
+                  <h3>Email Us</h3>
+                  <p>18N31A0599@mrcet.ac.in</p>
+                  <p>18N31A0588@mrcet.ac.in</p>
+                  <p>18N31A0592@mrcet.ac.in</p>
+                  <p>18N31A05K4@mrcet.ac.in</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box mt-4">
+                  <i class="bx bx-phone-call"></i>
+                  <h3>Call Us</h3>
+                  <p>+91 9129564023<br>+91 9213456781<br>+91 8234567891<br>+91 7654328792</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6 mt-4 mt-lg-0">
+            <form class="php-email-form">
+              <div class="row">
+                <img src="{{url_for('static', filename='img/contact.png')}}" alt="" height="302" !important />
+              </div>
+              </form>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+</body>
+{% endblock %}
+
+</html>

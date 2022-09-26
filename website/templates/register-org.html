@@ -1,0 +1,108 @@
+{% extends "base.html" %} {% block title %}Donate {% endblock %}
+
+{% block nav %} 
+{% if user.is_authenticated %}
+<li><a class="nav-link scrollto active" href="/">Home</a></li>
+<li><a class="nav-link scrollto" href="search.html">Search</a></li>
+<li><a class="nav-link scrollto" href="/logout">Logout</a></li>
+{% else %}
+<li><a class="nav-link scrollto active" href="/">Home</a></li>
+<li><a class="nav-link scrollto" href="login.html">Login</a></li>
+{% endif %}
+
+{% endblock%}
+{% block footer %}
+{% if user.is_authenticated %}
+<li><i class="bx bx-chevron-right"></i> <a href="/">Home</a></li>
+<li><i class="bx bx-chevron-right"></i> <a href="search.html">Search</a></li>
+<li><i class="bx bx-chevron-right"></i> <a href="/logout">Logout</a></li>
+{% else %}
+<li><i class="bx bx-chevron-right"></i> <a href="/">Home</a></li>
+<li><i class="bx bx-chevron-right"></i> <a href="login.html">Login</a></li>
+{% endif %}
+
+{% endblock %}
+{% block content%}
+<div class="login-wrap">
+	<div class="login-html">
+		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Organization</label>
+		<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab"></label>
+		<div class="login-form">
+            <div class="sign-in-htm">
+              <form method="POST" >
+				<div class="group">
+					<label for="user" class="label">Organization name</label>
+					<input id="user" type="text" class="input" name='name'>
+				</div>
+                    <div class="group">
+                        <label for="name" class="label">Blood Group</label>
+                        <select class="input" id="blood_group" name="blood_group" required>
+                        <option value="">---Select Your Blood Group---</option>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                      </select>
+                        </div>
+                        <div class="group">
+                            <label for="quantity" class="label">Select Quantity (<100)</label>
+                            <input id="quantity" type="tel" class="input" data-type="tel" name="quantity" maxlength="2">
+                        </div>
+                        
+                            <div class="group">
+                                <label for="name" class="label">Select District</label>
+                                <select class="input" id="district" name="district" required>
+                                <option value="">---Select Your District---</option>
+                                <option value="Adilabad">Adilabad</option>
+                                <option value="Bhadradri Kothagudem">Bhadradri Kothagudem</option>
+                                <option value="Hyderabad">Hyderabad</option>
+                                <option value="Jagitial">Jagitial</option>
+                                <option value="Jangaon">Jangaon</option>
+                                <option value="Jayashankar Bhupalpally">Jayashankar Bhupalpally</option>
+                                <option value="Jogulamba Gadwal">Jogulamba Gadwal</option>
+                                <option value="Kamareddy">Kamareddy</option>
+                                <option value="Karimnagar">Karimnagar</option>
+                                <option value="Khammam">Khammam</option>
+                                <option value="Komaram Bheem">Komaram Bheem</option>
+                                <option value="Mahabubabad">Mahabubabad</option>
+                                <option value="Mahabubnagar">Mahabubnagar</option>
+                                <option value="Mancherial">Mancherial</option>
+                                <option value="Medak">Medak</option>
+                                <option value="Medchal–Malkajgiri">Medchal–Malkajgiri</option>
+                                <option value="Mulugu">Mulugu</option>
+                                <option value="Nagarkurnool">Nagarkurnool</option>
+                                <option value="Narayanpet">Narayanpet</option>
+                                <option value="Nalgonda">Nalgonda</option>
+                                <option value="Nirmal">Nirmal</option>
+                                <option value="Nizamabad">Nizamabad</option>
+                                <option value="Peddapalli">Peddapalli</option>
+                                <option value="Rajanna Sircilla">Rajanna Sircilla</option>
+                                <option value="Ranga Reddy">Ranga Reddy</option>
+                                <option value="Sangareddy">Sangareddy</option>
+                                <option value="Siddipet">Siddipet</option>
+                                <option value="Suryapet">Suryapet</option>
+                                <option value="Vikarabad">Vikarabad</option>
+                                <option value="Wanaparthy">Wanaparthy</option>
+                                <option value="Warangal Rural">Warangal Rural</option>
+                                <option value="Warangal Urban">Warangal Urban</option>
+                                <option value="Yadadri Bhuvanagiri">Yadadri Bhuvanagiri</option>
+                              </select>
+                                </div>    
+                                <div class="group">
+                                    <label for="number" class="label">Mobile number</label>
+                                    <input id="number" type="tel" class="input" data-type="tel" minlength="10" maxlength="10" name="mob_no" required>
+                                </div>     
+				
+				<div class="group">
+					<input type="submit" class="button" value="Register">
+                </div>
+			</div>
+    </form>
+		</div>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,80 @@
+{% extends "base.html" %} {% block title %}Search {% endblock %}
+{% block nav %} 
+<li><a class="nav-link scrollto active" href="/">Home</a></li>
+<li><a href="register.html">Donate</a></li>
+<li><a href="/logout">Logout</a></li>
+{% endblock%}
+{% block footer %}
+<li><i class="bx bx-chevron-right"></i> <a href="/">Home</a></li>
+<li><i class="bx bx-chevron-right"></i> <a href="register.html">Donate</a></li>
+{% endblock %}
+{% block content%}
+  <div class="login-wrap">
+    <div class="login-html">
+      <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Search</label>
+      <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab"></label>
+      <div class="login-form">
+        <div class="sign-in-htm">
+          <form method="POST" >
+          <div class="group">
+            <br><br><label for="name" class="label">Blood Group</label><br>
+            <select class="input" id="blood_group" name='blood_group' required>
+            <option value="">---Select Required Blood Group---</option>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+          </select>
+            </div>
+            <div class="group">
+              <br><br><label for="name" class="label">Select District</label><br>
+              <select class="input" id="district" name='district' required>
+              <option value="">---Select Your District---</option>
+              <option value="Adilabad">Adilabad</option>
+              <option value="Bhadradri Kothagudem">Bhadradri Kothagudem</option>
+              <option value="Hyderabad">Hyderabad</option>
+              <option value="Jagitial">Jagitial</option>
+              <option value="Jangaon">Jangaon</option>
+              <option value="Jayashankar Bhupalpally">Jayashankar Bhupalpally</option>
+              <option value="Jogulamba Gadwal">Jogulamba Gadwal</option>
+              <option value="Kamareddy">Kamareddy</option>
+              <option value="Karimnagar">Karimnagar</option>
+              <option value="Khammam">Khammam</option>
+              <option value="Komaram Bheem">Komaram Bheem</option>
+              <option value="Mahabubabad">Mahabubabad</option>
+              <option value="Mahabubnagar">Mahabubnagar</option>
+              <option value="Mancherial">Mancherial</option>
+              <option value="Medak">Medak</option>
+              <option value="Medchal–Malkajgiri">Medchal–Malkajgiri</option>
+              <option value="Mulugu">Mulugu</option>
+              <option value="Nagarkurnool">Nagarkurnool</option>
+              <option value="Narayanpet">Narayanpet</option>
+              <option value="Nalgonda">Nalgonda</option>
+              <option value="Nirmal">Nirmal</option>
+              <option value="Nizamabad">Nizamabad</option>
+              <option value="Peddapalli">Peddapalli</option>
+              <option value="Rajanna Sircilla">Rajanna Sircilla</option>
+              <option value="Ranga Reddy">Ranga Reddy</option>
+              <option value="Sangareddy">Sangareddy</option>
+              <option value="Siddipet">Siddipet</option>
+              <option value="Suryapet">Suryapet</option>
+              <option value="Vikarabad">Vikarabad</option>
+              <option value="Wanaparthy">Wanaparthy</option>
+              <option value="Warangal Rural">Warangal Rural</option>
+              <option value="Warangal Urban">Warangal Urban</option>
+              <option value="Yadadri Bhuvanagiri">Yadadri Bhuvanagiri</option>
+            </select>
+              </div>
+          <div class="group">
+            <br><br><br><br><input type="submit" class="button" value="Search">
+          </div>
+        </form>
+        </div>
+        </div>
+      </div>
+      </div>
+  {% endblock %}

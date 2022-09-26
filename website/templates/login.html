@@ -1,0 +1,40 @@
+{% extends "base.html" %} {% block title %}Login {% endblock %}
+{% block nav %} 
+<li><a href="/">Home</a></li>
+<li><a class="nav-link scrollto" href="search.html">Search</a></li>
+<li><a href="register.html">Donate</a></li>
+{% endblock%}
+{% block footer %}
+<li><i class="bx bx-chevron-right"></i> <a href="/">Home</a></li>
+<li><i class="bx bx-chevron-right"></i> <a href="register.html">Donate</a></li>
+
+{% endblock %}
+{% block content%}
+   <div class="login-wrap">
+	<div class="login-html">
+		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
+		<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab"></label>
+		<div class="login-form">
+			<div class="sign-in-htm">
+        <form method="POST" >
+				<div class="group">
+					<br><br><br><label for="user" class="label">Username</label>
+					<input id="user" type="text" class="input" autocomplete="off" name='user'>
+				</div>
+				<div class="group">
+					<br><br><label for="pass" class="label">Password</label>
+					<input id="pass" type="password" class="input" data-type="password" minlength="4" maxlength="12" autocomplete="off" name='pass'>
+				</div>
+				<div class="group">
+					<br><br><br><br><input type="submit" class="button" value="Sign In">
+				</div>
+				<div class="group">
+					<input type="button" class="button" value="Create an Account" onclick="location.href='sign-up.html';" />
+				</div>
+			</div>
+		</form>
+		</div>
+		</div>
+	</div>
+{% endblock %}
+		

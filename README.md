@@ -6,4 +6,4 @@ Welcome to the Blood Donation System, a platform dedicated to facilitating blood
 User-friendly registration process for blood donors.
 Effortless search functionality to find blood donors based on location and blood type.
 Round-the-clock availability ensures immediate access to blood donation resources.
-Explore the live demo [here]([https://www.google.com](https://blooddonation.pythonanywhere.com/) and join us in making a difference!
+Explore the live demo [here](https://blooddonation.pythonanywhere.com/) and join us in making a difference!
